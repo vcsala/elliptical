@@ -12,20 +12,20 @@
                 "file": "images/menu_icon.png",
                 "menuIcon": true,
                 "name": "MENU_ICON",
-                "targetPlatforms": [
-                    "basalt"
-                ],
-                "type": "png"
+                "targetPlatforms": null,
+                "type": "bitmap"
             }
         ]
     },
     "sdkVersion": "3",
     "shortName": "Elliptical",
     "targetPlatforms": [
-        "basalt"
+        "aplite",
+        "basalt",
+        "chalk"
     ],
     "uuid": "5b39ca18-54f0-403c-9b7c-a26aef17726e",
-    "versionLabel": "1.0",
+    "versionLabel": "1.1",
     "watchapp": {
         "watchface": true
     }

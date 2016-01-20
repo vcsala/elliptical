@@ -198,10 +198,17 @@ static void update_canvas_proc(Layer *layer, GContext *ctx) {
   graphics_context_set_stroke_width(ctx, THICK_LINE);
   graphics_draw_line(ctx, s_center, minute_hand);
   graphics_draw_circle(ctx, s_center, CENTER_RADIUS + 1);
-
+    
   graphics_context_set_stroke_color(ctx, HOUR_HAND_COLOR);
   graphics_context_set_stroke_width(ctx, THICK_LINE);
   graphics_draw_line(ctx, s_center, hour_hand);
+  
+#ifdef PBL_PLATFORM_APLITE
+  graphics_context_set_stroke_color(ctx, CLOCKFACE_COLOR);
+  graphics_context_set_stroke_width(ctx, THIN_LINE);
+  graphics_draw_line(ctx, s_center, hour_hand);
+#endif
+
   graphics_context_set_fill_color(ctx, CLOCKFACE_COLOR);
   graphics_context_set_stroke_color(ctx, HOUR_HAND_COLOR);
   graphics_context_set_stroke_width(ctx, THICK_LINE);
